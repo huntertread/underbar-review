@@ -251,9 +251,9 @@
 
       it('should return all odd numbers in an array', function() {
         var isOdd = function(num) { return num % 2 !== 0; };
-        var odds = FILL_ME_IN;
+        var odds = _.filter([1, 2, 3, 4, 5, 6, 7], isOdd);
 
-        expect(odds).to.eql([1, 3, 5]);
+        expect(odds).to.eql([1, 3, 5, 7]);
       });
 
       it('should produce a brand new array instead of modifying the input array', function() {
@@ -332,7 +332,7 @@
         var iterator = function(value) { return value === 1; };
         var numbers = [1, 2, 2, 3, 4, 4];
 
-        expect(_.uniq(FILL_ME_IN)).to.eql([1, 2]);
+        expect(_.uniq()).to.eql([1, 2]);
       });
 
       it('should produce a brand new array instead of modifying the input array', function() {
